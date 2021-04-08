@@ -37,8 +37,8 @@
   k8s_info:
     kind: "Pod"
     namespace: "{{ namespace }}"
-    kubeconfig: "{{ kubeconfig }}"
-    context: "{{ context }}"
+    kubeconfig: "/Users/osamaahmed17/.kube/config"
+    context: "azureCluster"
     label_selectors: "{{ label_selectors }}"
     field_selectors:
       - status.phase=Running
