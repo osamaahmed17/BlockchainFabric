@@ -37,8 +37,8 @@
   k8s_info:
     kind: "Pod"
     namespace: "{{ namespace }}"
-    kubeconfig: "{{ kubeconfig | default(kubernetes.config_file) }}"
-    context: "{{ context | default(kubernetes.context) }}"
+    kubeconfig: "{{ kubernetes.config_file }}"
+    context: "{{ kubernetes.context }}"
     label_selectors: "{{ label_selectors }}"
     field_selectors:
       - status.phase=Running
