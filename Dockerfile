@@ -25,10 +25,6 @@ RUN apt-get update -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install ansible && \
-    pip3 install jmespath && \
-    pip3 install openshift==0.10.1
-
 RUN rm /etc/apt/apt.conf.d/docker-clean
 RUN mkdir /etc/ansible/
 RUN /bin/echo -e "[ansible_provisioners:children]\nlocal\n[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
