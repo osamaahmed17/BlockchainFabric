@@ -37,8 +37,8 @@
   k8s_info:
     kind: "Pod"
     namespace: "{{ namespace }}"
-    kubeconfig: "{{ kubeconfig | default(kubernetes.config_file) }}"
-    context: "{{ context | default(kubernetes.context) }}"
+    kubeconfig: "/Users/osamaahmed17/.kube/config"
+    context: "azureCluster"
     label_selectors:
       - app = ca
     field_selectors:
