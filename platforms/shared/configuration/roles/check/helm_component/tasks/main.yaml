@@ -33,14 +33,13 @@
 # Task to check if Pod is deployed and running
 # This task will try for a maximum of 10 times with an interval of
 # 60 seconds between each try
-- name: 'Check for {{ component_type }} {{ component_name }} in {{ namespace }}'
+- name: 'Wait for {{ component_type }} {{ component_name }} in {{ namespace }}'
   k8s_info:
     kind: "Pod"
     namespace: "{{ namespace }}"
-    kubeconfig: "/Users/osamaahmed17/.kube/config"
-    context: "azureCluster"
-    label_selectors:
-      - "app = {{ component_name }}"
+    kubeconfig: "{{ kubeconfig | default(kubernetes.config_file) }}"
+    context: "{{ context | default(kubernetes.context) }}"
+    label_selectors: "{{ label_selectors }}"
     field_selectors:
       - status.phase=Running
   register: component_data
