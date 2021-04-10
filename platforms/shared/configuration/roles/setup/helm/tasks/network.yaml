@@ -129,16 +129,16 @@ network:
       # Git Repo details which will be used by GitOps/Flux.
       # Do not check-in git_access_token
       gitops:
-        git_protocol: "ssh" # Option for git over https or ssh
-        git_url: "git@github.com:osamaahmed17/blockchain-automation-framework.git"         # Gitops https or ssh url for flux value files 
+        git_protocol: "https" # Option for git over https or ssh
+        git_url: "https://github.com/osamaahmed17/blockchain-automation-framework"         # Gitops https or ssh url for flux value files 
         branch: "develop"           # Git branch where release is being made
         release_dir: "platforms/hyperledger-fabric/releases/dev" # Relative Path in the Git repo for flux sync per environment. 
         chart_source: "platforms/hyperledger-fabric/charts"     # Relative Path where the Helm charts are stored in Git repo
-        git_repo: "github.com/osamaahmed17/BlockchainFabric"   # Gitops git repository URL for git push  (without https://)
+        git_repo: "github.com/osamaahmed17/blockchain-automation-framework.git"   # Gitops git repository URL for git push  (without https://)
         username: "osamaahmed17"          # Git Service user who has rights to check-in in all branches
-        password: "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"          # Git Server user password
+        password: "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"          # Git Server user password
         email: "osamaahmedtahir17@gmail.com"                # Email to use in git config
-        private_key: "./gitops"             # Optional (required when protocol is ssh) : Path to private key file which has write-access to the git repo
+        private_key: "./gitops"          # Optional (required when protocol is ssh) : Path to private key file which has write-access to the git repo
      
       # Services maps to the pods that will be deployed on the k8s cluster
       # This sample is an orderer service and includes a zk-kafka consensus
@@ -208,16 +208,16 @@ network:
       # Git Repo details which will be used by GitOps/Flux.
       # Do not check-in git_access_token
       gitops:
-        git_protocol: "ssh" # Option for git over https or ssh
-        git_url: "git@github.com:osamaahmed17/blockchain-automation-framework.git"         # Gitops https or ssh url for flux value files 
+        git_protocol: "https" # Option for git over https or ssh
+        git_url: "https://github.com/osamaahmed1703/blockchain-automation-framework.git"         # Gitops https or ssh url for flux value files 
         branch: "develop"           # Git branch where release is being made
         release_dir: "platforms/hyperledger-fabric/releases/dev" # Relative Path in the Git repo for flux sync per environment. 
         chart_source: "platforms/hyperledger-fabric/charts"     # Relative Path where the Helm charts are stored in Git repo
-        git_repo: "github.com/osamaahmed17/BlockchainFabric"   # Gitops git repository URL for git push  (without https://)
-        username: "osamaahmed17"          # Git Service user who has rights to check-in in all branches
-        password: "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"          # Git Server user password
-        email: "osamaahmedtahir17@gmail.com"                # Email to use in git config
-        private_key: "./gitops"             # Optional (required when protocol is ssh) : Path to private key file which has write-access to the git repo
+        git_repo: "github.com/osamaahmed1703/blockchain-automation-framework.git"   # Gitops git repository URL for git push  (without https://)
+        username: "osamaahmed1703"          # Git Service user who has rights to check-in in all branches
+        password: "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"          # Git Server user password
+        email: "osama.Tahir@ibm.com"                # Email to use in git config
+        private_key: "./gitops"            # Optional (required when protocol is ssh) : Path to private key file which has write-access to the git repo
 
       # The participating nodes are peers
       # This organization hosts it's own CA server
@@ -250,12 +250,12 @@ network:
           chaincode:
             name: "chaincode_name" #This has to be replaced with the name of the chaincode
             version: "chaincode_version" #This has to be replaced with the version of the chaincode
-            maindirectory: "chaincode_main"  #The develop directory where chaincode is needed to be placed
+            maindirectory: "chaincode_main"  #The main directory where chaincode is needed to be placed
             lang: "golang"  # The language in which the chaincode is written ( golang/java/node )
             repository:
-              username: "osamaahmed17"          # Git Service user who has rights to check-in in all branches
-              password: "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"
-              url: "github.com/osamaahmed17/blockchain-automation-framework.git"
+              username: "osamaahmed1703"          # Git Service user who has rights to check-in in all branches
+              password: "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"
+              url: "github.com/osamaahmed1703/blockchain-automation-framework.git"
               branch: develop
               path: "chaincode_src"   #The path to the chaincode 
             arguments: 'chaincode_args' #Arguments to be passed along with the chaincode parameters
@@ -294,15 +294,15 @@ network:
       # Git Repo details which will be used by GitOps/Flux.
       # Do not check-in git_access_token
       gitops:
-        git_protocol: "ssh" # Option for git over https or ssh
-        git_url: "git@github.com:osamaahmed17/blockchain-automation-framework.git"         # Gitops https or ssh url for flux value files 
+        git_protocol: "https" # Option for git over https or ssh
+        git_url: "https://github.com/osamaahmed1703/blockchain-automation-framework.git"         # Gitops https or ssh url for flux value files 
         branch: "develop"           # Git branch where release is being made
         release_dir: "platforms/hyperledger-fabric/releases/dev" # Relative Path in the Git repo for flux sync per environment. 
         chart_source: "platforms/hyperledger-fabric/charts"     # Relative Path where the Helm charts are stored in Git repo
-        git_repo: "github.com/osamaahmed17/BlockchainFabric"   # Gitops git repository URL for git push  (without https://)
-        username: "osamaahmed17"          # Git Service user who has rights to check-in in all branches
-        password: "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"          # Git Server user password
-        email: "osamaahmedtahir17@gmail.com"                # Email to use in git config
+        git_repo: "github.com/osamaahmed1703/blockchain-automation-framework.git"   # Gitops git repository URL for git push  (without https://)
+        username: "osamaahmed1703"          # Git Service user who has rights to check-in in all branches
+        password: "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"          # Git Server user password
+        email: "osama.Tahir@ibm.com"                # Email to use in git config
         private_key: "./gitops"             # Optional (required when protocol is ssh) : Path to private key file which has write-access to the git repo
 
       services:
@@ -334,12 +334,12 @@ network:
           chaincode:
             name: "chaincode_name"   #This has to be replaced with the name of the chaincode
             version: "chaincode_version"   #This has to be replaced with the version of the chaincode
-            maindirectory: "chaincode_main"    #The develop directory where chaincode is needed to be placed
+            maindirectory: "chaincode_main"    #The main directory where chaincode is needed to be placed
             lang: "golang"  # The language in which the chaincode is written ( golang/java/node )
             repository:
-              username: "osamaahmed17"          # Git Service user who has rights to check-in in all branches
-              password: "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"
-              url: "github.com/osamaahmed17/blockchain-automation-framework.git"
+              username: "osamaahmed1703"          # Git Service user who has rights to check-in in all branches
+              password: "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"
+              url: "github.com/osamaahmed1703/blockchain-automation-framework.git"
               branch: develop 
               path: "chaincode_src"    #The path to the chaincode 
             arguments: 'chaincode_args'       #Arguments to be passed along with the chaincode parameters
@@ -376,15 +376,15 @@ network:
       # Git Repo details which will be used by GitOps/Flux.
       # Do not check-in git_access_token
       gitops:
-        git_protocol: "ssh" # Option for git over https or ssh
-        git_url: "git@github.com:osamaahmed17/blockchain-automation-framework.git"         # Gitops https or ssh url for flux value files 
-        branch: "develop"           # Git branch where release is being made
+        git_protocol: "https" # Option for git over https or ssh
+        git_url: "https://github.com/osamaahmed1703/blockchain-automation-framework.git"         # Gitops https or ssh url for flux value files 
+        branch: "main"           # Git branch where release is being made
         release_dir: "platforms/hyperledger-fabric/releases/dev" # Relative Path in the Git repo for flux sync per environment. 
         chart_source: "platforms/hyperledger-fabric/charts"     # Relative Path where the Helm charts are stored in Git repo
-        git_repo: "github.com/osamaahmed17/BlockchainFabric"   # Gitops git repository URL for git push  (without https://)
-        username: "osamaahmed17"          # Git Service user who has rights to check-in in all branches
-        password: "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"          # Git Server user password
-        email: "osamaahmedtahir17@gmail.com"                # Email to use in git config
+        git_repo: "https://github.com/osamaahmed1703/BlockchainFabric"   # Gitops git repository URL for git push  (without https://)
+        username: "osamaahmed1703"          # Git Service user who has rights to check-in in all branches
+        password: "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"          # Git Server user password
+        email: "osama.Tahir@ibm.com"                # Email to use in git config
         private_key: "./gitops"             # Optional (required when protocol is ssh) : Path to private key file which has write-access to the git repo
 
       #Optional for infrastructure configuration files.
@@ -421,12 +421,12 @@ network:
           chaincode:
             name: "chaincode_name" #This has to be replaced with the name of the chaincode
             version: "chaincode_version" #This has to be replaced with the version of the chaincode
-            maindirectory: "chaincode_main"  #The develop directory where chaincode is needed to be placed
+            maindirectory: "chaincode_main"  #The main directory where chaincode is needed to be placed
             lang: "golang"  # The language in which the chaincode is written ( golang/java/node )
             repository:
-              username: "osamaahmed17"          # Git Service user who has rights to check-in in all branches
-              password: "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"
-              url: "github.com/osamaahmed17/blockchain-automation-framework.git"
+              username: "osamaahmed1703"          # Git Service user who has rights to check-in in all branches
+              password: "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"
+              url: "github.com/osamaahmed1703/blockchain-automation-framework.git"
               branch: develop
               path: "chaincode_src"   #The path to the chaincode 
             arguments: 'chaincode_args' #Arguments to be passed along with the chaincode parameters
@@ -465,15 +465,15 @@ network:
       # Git Repo details which will be used by GitOps/Flux.
       # Do not check-in git_access_token
       gitops:
-        git_protocol: "ssh" # Option for git over https or ssh
-        git_url: "git@github.com:osamaahmed17/blockchain-automation-framework.git"         # Gitops https or ssh url for flux value files 
+        git_protocol: "https" # Option for git over https or ssh
+        git_url: "https://github.com/osamaahmed1703/blockchain-automation-framework.git"         # Gitops https or ssh url for flux value files 
         branch: "develop"           # Git branch where release is being made
         release_dir: "platforms/hyperledger-fabric/releases/dev" # Relative Path in the Git repo for flux sync per environment. 
         chart_source: "platforms/hyperledger-fabric/charts"     # Relative Path where the Helm charts are stored in Git repo
-        git_repo: "github.com/osamaahmed17/BlockchainFabric"   # Gitops git repository URL for git push  (without https://)
-        username: "osamaahmed17"          # Git Service user who has rights to check-in in all branches
-        password: "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"          # Git Server user password
-        email: "osamaahmedtahir17@gmail.com"                # Email to use in git config
+        git_repo: "github.com/osamaahmed1703/blockchain-automation-framework.git"   # Gitops git repository URL for git push  (without https://)
+        username: "osamaahmed1703"          # Git Service user who has rights to check-in in all branches
+        password: "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"          # Git Server user password
+        email: "osama.Tahir@ibm.com"                # Email to use in git config
         private_key: "./gitops"             # Optional (required when protocol is ssh) : Path to private key file which has write-access to the git repo
 
       services:
@@ -505,12 +505,12 @@ network:
           chaincode:
             name: "chaincode_name"     #This has to be replaced with the name of the chaincode
             version: "chaincode_version"     #This has to be replaced with the version of the chaincode
-            maindirectory: "chaincode_main"   #The develop directory where chaincode is needed to be placed
-            lang: "golang"  # The language in which the chaincode is written ( golang/java/node )
+            maindirectory: "chaincode_main"   #The main directory where chaincode is needed to be placed
+            lang: "node"  # The language in which the chaincode is written ( golang/java/node )
             repository:
-              username: "osamaahmed17"          # Git Service user who has rights to check-in in all branches
-              password: "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"
-              url: "github.com/osamaahmed17/blockchain-automation-framework.git"
+              username: "osamaahmed1703"          # Git Service user who has rights to check-in in all branches
+              password: "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"
+              url: "github.com/osamaahmed1703/blockchain-automation-framework.git"
               branch: develop
               path: "chaincode_src"   #The path to the chaincode 
             arguments: 'chaincode_args'     #Arguments to be passed along with the chaincode parameters

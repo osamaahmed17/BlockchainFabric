@@ -40,7 +40,7 @@
     kubeconfig: "/Users/osamaahmed17/.kube/config"
     context: "azureCluster"
     label_selectors:
-      - app = ca
+      - "app = {{ component_name }}"
     field_selectors:
       - status.phase=Running
   register: component_data

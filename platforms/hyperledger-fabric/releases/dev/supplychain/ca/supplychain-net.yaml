@@ -8,7 +8,7 @@ metadata:
 spec:
   releaseName: supplychain-net-ca
   chart:
-    git: https://github.com/osamaahmed1703/blockchain-automation-framework.git
+    git: https://github.com/osamaahmed17/blockchain-automation-framework.git
     ref: develop
     path: platforms/hyperledger-fabric/charts/ca    
   values:
